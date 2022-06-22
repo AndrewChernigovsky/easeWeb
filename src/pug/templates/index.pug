@@ -1,0 +1,38 @@
+extends ../layout/main.pug
+include ../modules/mixins/mixins
+
+block variables
+    include ../abstraction/variables
+    -   let mainPage= true
+block head 
+    include ../partials/head/head
+
+block title
+    each title in titles
+        if title == indexTitles
+            title= title.company
+
+block content 
+    include ../sections/main-section/main-section
+
+    if (mainPage)
+        h3 sexes
+    else
+        h2 eseees22
+
+    +list1('list1', ...list1)
+
+    include ../modules/includes/forms/form-name-phone
+
+    each texts, el in text
+        if el == 0
+            p(class=pClass)= texts
+
+    each url in urls
+        if url == urlLinkMenu
+            a(href=url.urlIndex) Index Page
+            a(href=urlPath.urlPathMenuFromIndex+ url.urlCompany) About Company
+    p salut
+
+    each url, i in urls
+        a(href=url)
