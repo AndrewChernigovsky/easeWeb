@@ -182,7 +182,8 @@
         gulp.parallel(
           gulp.series(gulpConfig.task.fileIncludepug),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
-          gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors)
+          gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
+          gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)
         ),
         gulpConfig.task.copyFolders,
         gulp.parallel(gulpConfig.task.browserSync, gulpConfig.task.watch)

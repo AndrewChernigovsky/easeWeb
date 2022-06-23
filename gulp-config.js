@@ -79,7 +79,7 @@ module.exports = {
     return [
       `./${this.folder.src}/**`,
       `!{${this.folder.src}/icon-svg,${this.folder.src}/icon-svg/**}`,
-      `!{${this.folder.src}/images,${this.folder.src}/images/**}`,
+      `${this.folder.src}/images/**/*}`,
       `!{${this.folder.src}/js,${this.folder.src}/js/**}`,
       `!{${this.folder.src}/pug,${this.folder.src}/pug/**}`,
       `!{${this.folder.src}/scss,${this.folder.src}/scss/**}`,
