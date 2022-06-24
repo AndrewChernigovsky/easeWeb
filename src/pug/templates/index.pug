@@ -28,11 +28,3 @@ block content
         if el == 0
             p(class=pClass)= texts
 
-    each url in urls
-        if url == urlLinkMenu
-            a(href=url.urlIndex) Index Page
-            a(href=urlPath.urlPathMenuFromIndex+ url.urlCompany) About Company
-    p salut
-
-    each url, i in urls
-        a(href=url)
