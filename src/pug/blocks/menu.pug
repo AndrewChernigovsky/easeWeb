@@ -5,8 +5,8 @@ nav(class=menuClasses[0])
     each ul in menuClasses
         if ul === navUlClasses
             ul(class=ul)
-            - for (var x = 0; x < 7; x++)
-            each href in menuLinksUrl
-                li(class=menuClasses[4])
-                    a(href=href class=menuClasses[5])= 1
-    
+            each href, el in menuLinksUrl
+                if el == 1
+                    each linkText, el in menuTextNames
+                        li(class=menuClasses[4])
+                            a(href=href class=menuClasses[5])= linkText    
