@@ -4,9 +4,8 @@ nav(class=menuClasses[0])
     div(class=menuClasses[2])
         each ul in menuClasses
             if ul === navUlClasses
-                ul(class=ul)  
-                    each linkText, el in menuTextNames
-                        if el == 3
-                            each href in menuLinksUrl
-                                li(class=menuClasses[4])
-                                    +aLink(href, menuClasses[5], linkText)                
+                ul(class=ul)
+                    each val1 in menuItems
+                        each val in val1
+                            li(class=menuClasses[4])
+                                +aLink(val, menuClasses[5], val)

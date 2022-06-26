@@ -62,13 +62,14 @@
 //- //   ]
 
 -
-  let menuTextNames = [
-    'Cтатьи',
-    'Контакты',
-    'О нас',
-    'Контекстная реклама',
-    'Создание сайтов',
-  ]
+  let menuTextNames = {
+    main1: 'Главная',
+    main2: 'Cтатьи',
+    main3: 'Контакты',
+    main4: 'О нас',
+    main5: 'Контекстная реклама',
+    main6: 'Создание сайтов',
+  }
   
 - let urlIndex = urlPath.urlPathMenuFromIndex + urlLinkMenu[0]
 - let urlArticles = urlPath.urlPathMenuFromIndex + urlLinkMenu[1]
@@ -78,11 +79,17 @@
 - let urlContacts = urlPath.urlPathMenuFromIndex + urlLinkMenu[5]
 
 -
-  let menuLinksUrl = [
-    urlIndex,
-    urlArticles,
-    urlCompany,
-    urlMarketing,
-    urlWebbuilding,
-    urlContacts
+  let menuLinksUrl = {
+    main1: urlIndex,
+    main2: urlArticles,
+    main3: urlCompany,
+    main4: urlMarketing,
+    main5: urlWebbuilding,
+    main6: urlContacts
+  }
+
+-
+  let menuItems= [
+    menuTextNames,
+    menuLinksUrl
   ]
