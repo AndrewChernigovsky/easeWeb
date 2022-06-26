@@ -5,7 +5,6 @@ nav(class=menuClasses[0])
         each ul in menuClasses
             if ul === navUlClasses
                 ul(class=ul)
-                    each val1 in menuItems
-                        each val in val1
-                            li(class=menuClasses[4])
-                                +aLink(val, menuClasses[5], val)
+                    for val in menuItems
+                        li(class=menuClasses[4])
+                            +aLink(val.url, menuClasses[5], val.title)

@@ -28,49 +28,6 @@
   navLink
   ]
 
-//- links
-//- // -
-//- //   let menuTextNames = [
-//- //     'Cтатьи',
-//- //     'Контакты',
-//- //     'О нас',
-//- //     'Контекстная реклама',
-//- //     'Создание сайтов',
-//- //     'Отзывы',
-//- //     'Частые вопросы',
-//- //   ]
-
-//- // - let urlIndex = urlPath.urlPathMenuFromIndex + urlLinkMenu[0]
-//- // - let urlArticles = urlPath.urlPathMenuFromIndex + urlLinkMenu[1]
-//- // - let urlCompany = urlPath.urlPathMenuFromIndex + urlLinkMenu[2]
-//- // - let urlMarketing = urlPath.urlPathMenuFromIndex + urlLinkMenu[3]
-//- // - let urlWebbuilding = urlPath.urlPathMenuFromIndex + urlLinkMenu[4]
-//- // - let urlContacts = urlPath.urlPathMenuFromIndex + urlLinkMenu[5]
-//- // - let urlFeedBack = urlPath.urlPathMenuFromIndex + urlLinkMenu[6]
-//- // - let urlFaqHelp = urlPath.urlPathMenuFromIndex + urlLinkMenu[7]
-
-//- // -
-//- //   let menuLinksUrl = [
-//- //     urlIndex,
-//- //     urlArticles,
-//- //     urlCompany,
-//- //     urlMarketing,
-//- //     urlWebbuilding,
-//- //     urlContacts,
-//- //     urlFeedBack,
-//- //     urlFaqHelp
-//- //   ]
-
--
-  let menuTextNames = {
-    main1: 'Главная',
-    main2: 'Cтатьи',
-    main3: 'Контакты',
-    main4: 'О нас',
-    main5: 'Контекстная реклама',
-    main6: 'Создание сайтов',
-  }
-  
 - let urlIndex = urlPath.urlPathMenuFromIndex + urlLinkMenu[0]
 - let urlArticles = urlPath.urlPathMenuFromIndex + urlLinkMenu[1]
 - let urlCompany = urlPath.urlPathMenuFromIndex + urlLinkMenu[2]
@@ -79,17 +36,11 @@
 - let urlContacts = urlPath.urlPathMenuFromIndex + urlLinkMenu[5]
 
 -
-  let menuLinksUrl = {
-    main1: urlIndex,
-    main2: urlArticles,
-    main3: urlCompany,
-    main4: urlMarketing,
-    main5: urlWebbuilding,
-    main6: urlContacts
-  }
-
--
   let menuItems= [
-    menuTextNames,
-    menuLinksUrl
+    {title: 'Главная', url: urlIndex},
+    {title: 'Cтатьи', url: urlArticles},
+    {title: 'Контакты', url: urlContacts},
+    {title: 'О нас', url: urlCompany},
+    {title: 'Контекстная реклама', url: urlMarketing},
+    {title: 'Создание сайтов', url: urlWebbuilding},
   ]
