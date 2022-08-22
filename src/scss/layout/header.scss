@@ -1,8 +1,12 @@
 .header {
   padding: 2rem 0;
+  background-color: blue;
+  width: 100%;
 
-  &__wrap {
+  &__wrapper {
     @extend %d-flex-center-between;
+    min-width: 100%;
+    background-color: $blue1;
 
     @include media(">=tablet") {
       justify-content: center;
@@ -22,13 +26,16 @@
   z-index: 5;
   transition: $base-transition;
   transform: translateX(110%);
+  background-color: $blue;
 
   @include media(">=tablet") {
+    justify-content: flex-start;
     position: static;
-    background-color: $white;
+    background-color: $blue;
+    color: $white;
     transform: translateX(0);
-    padding: 0;
-    width: auto;
+    padding: 2rem;
+    width: 100%;
   }
 
   &.active {
@@ -115,5 +122,42 @@
     &:nth-child(3) {
       margin-top: 4px;
     }
+  }
+}
+
+.menu {
+
+  &__list {
+    @include media(">=tablet") { 
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav-item {
+    @include media(">=tablet") { 
+      margin-left: 2rem;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__nav-link {
+    color: $white;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $orange;
+      transition: $base-transition;
+    }
+
+    &:active {
+      color: $white;
+    }
+
   }
 }

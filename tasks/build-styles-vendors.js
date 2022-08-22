@@ -23,7 +23,7 @@ module.exports = function (options) {
       }))
       .pipe(cssimport())
       .pipe(rename(options.vendorScssMin))
-      .pipe(gulpif(options.isProduction, cssnano({ safe: true })))
+      .pipe(gulpif(options.isProduction,cssnano({ safe: true })))
       .pipe(gulp.dest(`./${options.dest}/css`));
   };
 };

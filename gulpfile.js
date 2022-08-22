@@ -72,6 +72,7 @@
   // BUILDCUSTOM
 
   requireTask(`${gulpConfig.task.buildSassCustom}`, `./${gulpConfig.folder.tasks}/`, {
+    src: gulpConfig.folder.src,
     sassFilesInfo: gulpConfig.getPathesForSassCompiling(),
     dest: gulpConfig.folder.build,
   });
@@ -84,6 +85,13 @@
     vendorScss: gulpConfig.file.vendorScss,
     vendorScssMin: gulpConfig.file.vendorScssMin,
     checkProduction: true,
+  });
+
+  // fonts
+
+  requireTask(`${gulpConfig.task.fonts}`, `./${gulpConfig.folder.tasks}}/`, {
+    src: gulpConfig.folder.src,
+    dest: gulpConfig.folder.build,
   });
 
     /**
@@ -180,7 +188,7 @@
         gulpConfig.task.cleanBuild,
         gulpConfig.task.esLint,
         gulp.parallel(
-          gulp.series(gulpConfig.task.fileIncludepug),
+          gulp.series(gulpConfig.task.fileIncludepug, gulpConfig.task.fonts),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
           gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
           gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)

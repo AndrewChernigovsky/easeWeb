@@ -2,7 +2,8 @@ extends ../../layout/header.pug
 
 block header
     header(class=header)
-        div(class=container)
-            block headerWrapper
-                div(class=headerWrapper)
-                    
+        block container
+            div(class=container)
+                block headerWrapper
+                    div(class=headerWrapper)
+                        include ../../blocks/menu.pug

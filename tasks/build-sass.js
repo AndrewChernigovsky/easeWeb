@@ -30,7 +30,7 @@ module.exports = function (options) {
       )
       .pipe(gulpif(options.isProduction, autoprefixer()))
       .pipe(gulpif(options.isProduction, gcmq()))
-      .pipe(gulpif(options.isProduction, cssnano({ safe: true })))
+      .pipe(gulpif(options.isProduction,cssnano({ safe: true })))
       .pipe(gulpif(!options.isProduction, sourcemaps.write('./')))
       .pipe(gulp.dest(`./${options.dest}/css`));
   };

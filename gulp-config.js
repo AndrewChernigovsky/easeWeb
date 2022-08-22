@@ -32,6 +32,7 @@ module.exports = {
     buildSass: 'build-sass',
     buildSassCustom: 'build-sass-custom',
     buildStylesVendors: 'build-styles-vendors',
+    fonts: 'fonts',
     imageMin: 'image-min',
     imageWebP: 'image-webp',
     svgSprite: 'svg-sprite',
