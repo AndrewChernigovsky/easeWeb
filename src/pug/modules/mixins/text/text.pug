@@ -17,7 +17,7 @@ mixin aLink(urlLink, className, ...links)
 //- titles
 
 mixin h1(className, text)
-    h1(class=className)= text
+    h1(class=(className, mainTitle))= text
 
 mixin h2(className, text)
     h2(class=className)= text

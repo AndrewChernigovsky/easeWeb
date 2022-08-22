@@ -4,9 +4,9 @@ mixin picture(idImg, className, ...source)
             each src1 in srcArray
                 if src1 == src
                     picture
-                        source(type=typesWebp media=mediaArr[0] srcset=`${src1}`)
-                        source(type=typesWebp media=mediaArr[1] srcset=`${src1}`)
-                        source(type=typesWebp media=mediaArr[2] srcset=`${src1}`)
+                        source(type=typesWebp media=mediaArr[0] srcset=`${assets/images/icons/logo.png}`)
+                        //- source(type=typesWebp media=mediaArr[1] srcset=`${src1}`)
+                        //- source(type=typesWebp media=mediaArr[2] srcset=`${src1}`)
                 
                         if src1 == src
                             img(class=className src=src1[0] alt=idImg id=idImages[0])
