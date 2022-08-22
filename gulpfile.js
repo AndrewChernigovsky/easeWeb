@@ -89,10 +89,15 @@
 
   // fonts
 
-  requireTask(`${gulpConfig.task.fonts}`, `./${gulpConfig.folder.tasks}}/`, {
-    src: gulpConfig.folder.src,
-    dest: gulpConfig.folder.build,
-  });
+  // requireTask(`${gulpConfig.task.ttf2woff}`, `./${gulpConfig.folder.tasks}}/`, {
+  //   src: gulpConfig.folder.src,
+  //   dest: gulpConfig.folder.build,
+  // });
+
+  // requireTask(`${gulpConfig.task.ttf2woff2}`, `./${gulpConfig.folder.tasks}}/`, {
+  //   src: gulpConfig.folder.src,
+  //   dest: gulpConfig.folder.build,
+  // });
 
     /**
    * Minify images
@@ -171,6 +176,8 @@
       browserSync,
       tasks: {
         esLint: gulpConfig.task.esLint,
+        ttf2woff: gulpConfig.task.ttf2woff,
+        ttf2woff2: gulpConfig.task.ttf2woff2,
         buildCustomJs: gulpConfig.task.buildCustomJs,
         buildSass: gulpConfig.task.buildSass,
         buildSassCustom: gulpConfig.task.buildSassCustom,
@@ -188,7 +195,12 @@
         gulpConfig.task.cleanBuild,
         gulpConfig.task.esLint,
         gulp.parallel(
-          gulp.series(gulpConfig.task.fileIncludepug, gulpConfig.task.fonts),
+          gulp.series(gulpConfig.task.fileIncludepug, 
+            // gulp.parallel(
+            //   gulpConfig.task.ttf2woff,
+            //   gulpConfig.task.ttf2woff2
+            // )
+          ),
           gulp.series(gulpConfig.task.buildSass, gulpConfig.task.buildSassCustom, gulpConfig.task.buildStylesVendors),
           gulp.series(gulpConfig.task.buildCustomJs, gulpConfig.task.buildJsVendors),
           gulp.parallel(gulpConfig.task.svgSprite, gulpConfig.task.imageWebP)

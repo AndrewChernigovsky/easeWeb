@@ -32,7 +32,8 @@ module.exports = {
     buildSass: 'build-sass',
     buildSassCustom: 'build-sass-custom',
     buildStylesVendors: 'build-styles-vendors',
-    fonts: 'fonts',
+    // ttf2woff: 'ttf2woff',
+    // ttf2woff2: 'ttf2woff2',
     imageMin: 'image-min',
     imageWebP: 'image-webp',
     svgSprite: 'svg-sprite',
@@ -84,6 +85,7 @@ module.exports = {
       `!{${this.folder.src}/js,${this.folder.src}/js/**}`,
       `!{${this.folder.src}/pug,${this.folder.src}/pug/**}`,
       `!{${this.folder.src}/scss,${this.folder.src}/scss/**}`,
+      `${this.folder.src}/fonts/**}`,
       `${this.folder.src}/php/**}`,
       `!{${this.folder.src}/vendor_entries,${this.folder.src}/vendor_entries/**}`,
     ];

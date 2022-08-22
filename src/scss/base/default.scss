@@ -9,7 +9,7 @@ html {
 
 body {
   @include font-smoothing(on);
-  font-family: $primary-font;
+  font-family: $primary-font, 'Arial', sans-serif;
   min-width: 320px;
 
   &.overflow {

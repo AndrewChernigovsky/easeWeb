@@ -126,6 +126,10 @@
 }
 
 .menu {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__list {
     @include media(">=tablet") { 
@@ -159,5 +163,21 @@
       color: $white;
     }
 
+  }
+
+  .menuButton {
+    color: $white;
+    font-size: 1.6rem;
+    transition: $base-transition;
+    border: 1px solid $orange;
+    padding: 0.5rem;
+
+    @include media(">=tablet") { 
+      padding: 1rem;
+    }
+
+    &:hover {
+      color: $orange;
+    }
   }
 }
