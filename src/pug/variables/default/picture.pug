@@ -1,101 +1,38 @@
+- let logoPicture = true
+
+//- folders
+- let folderContent = true
+- let folderDecor = true
+- let folderIcons = true
+- let folderSprite = true
+
+- let folderContentName = 'content'
+- let folderDecorName = 'decor'
+- let folderIconsName = 'icons'
+- let folderSpriteName = 'sprite'
+
+//- types files
+- let png = '.png'
+- let jpg = '.jpg'
+- let webp = '.webp'
+
 - let typesWebp = 'image/webp'
-- let typeWebp = '.webp'
-- let typeJpg= '.jpg'
-- let typePng= '.png'
-- let min = 'min'
-- let max = 'max'
-- let minWidth = 0;
-- let img = 'image'
-- let imageFeed1 = 'imageFeed'
 
-- let Width320 = min + '-width:320px'
-- let Width768 = min + '-width:768px'
-- let Width1024 = min + '-width:1024px'
+//- images
+if (folderIcons)
+    -
+        let imagesUrlSrc = [
+            'logo': {
+                'png': `assets/images/${folderIconsName}/logo${png}`,
+                'jpg': `assets/images/${folderIconsName}/logo${jpg}`,
+                'webp': `assets/images/${folderIconsName}/logo${webp}`,
+            },
+        ]
 
+//- media
 -
     let mediaArr = [
-        Width320,
-        Width768,
-        Width1024 
+        'min-width: 768px',
+        'min-width: 1024px',
+        'min-width: 1440px',
     ]
-
-
--   let x2 = ' 2x'
--   let x1 = ' 1x'
--   let xx2 = '@2x'
--   let xx1 = '@1x'
--   let x2000x2000 = '2000x2000'
--   let x1000x1000 = '1000x1000'
-
--
-    let nameFile = [
-        'feed',
-        'filter'
-    ]
-
--
-    let urlFiles = [
-        'assets/images/content/feedback/',
-        'assets/images/icons/logo'
-    ]
-
--   let nameImagexx2 = nameFile[0] + xx2 + x2000x2000 
--   let nameImagexx1 = nameFile[0] + xx1 + x1000x1000 
-
--   let fullNameImageUrlxx2 = urlFiles[0] + nameImagexx2
--   let fullNameImageUrlxx1 = urlFiles[0] + nameImagexx1
-
--
-    let urlimg = [
-        fullNameImageUrlxx2,
-        fullNameImageUrlxx1,
-        fullNameImageUrl,
-    ] 
-
-- let jpg = false
-
-- let src1Wx2 = urlimg[0] + typeWebp + x2
-- let src1Wx1 = urlimg[1] + typeWebp + x1
-
-- let src1J = urlimg[0] + typeJpg + x2
-
-- let src2Wx2 = urlimg[0] + typeWebp + x2
-- let src2Wx1 = urlimg[1] + typeWebp + x1
-
-- let src3J = urlimg[1] + typeJpg + x1
-
--
-    let src = [
-        src1Wx2,
-        src1Wx1,
-    ]
-
--
-    let src1 = [
-        src2Wx2,
-        src2Wx1,
-    ]
-
--
-    let srcArray1 = [
-        src,
-        src1
-    ]
-
--
-    let srcArray = [
-        src,
-        src1
-    ]
-
--
-    let idImages = [
-        imageFeed1,
-        imageFeed2,
-    ]
-
-
--   let w100 = 100
--   let h100 = 100
--   let width = (w100*1.25).toString() + 'px'
--   let height = (h100*1.25).toString() + 'px'
