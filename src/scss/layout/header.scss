@@ -29,7 +29,8 @@
   background-color: $blue;
 
   @include media(">=tablet") {
-    justify-content: flex-start;
+    display: flex;
+    justify-content: space-between;
     position: static;
     background-color: $blue;
     color: $white;
@@ -70,7 +71,6 @@
   a {
     width: 150px;
     height: 20px;
-    background-color: $warning;
   }
 }
 
@@ -172,13 +172,17 @@
     transition: $base-transition;
     border: 1px solid $orange;
     padding: 0.5rem;
+    margin-left: 2rem;
 
     @include media(">=tablet") { 
       padding: 1rem;
+      margin-left: 6rem;
     }
 
     &:hover {
       color: $orange;
+      background-color: $blue2;
+      border: 1px solid $white;
     }
   }
 }

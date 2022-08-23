@@ -1,5 +1,6 @@
 section(class=introSectionClasses[0])
   div(class=container)
     div(class=introSectionClasses[1])
-      +h1(sectionTitleClass, sectionTitleTexts[0])
-      include ../../modules/includes/sliders/sliderMain
+      if (mainPage)
+        +h1(sectionTitleClass, sectionTitleTexts[0])
+        include ../../modules/includes/sliders/sliderMain
