@@ -17,17 +17,22 @@
 - let webp = '.webp'
 
 - let typesWebp = 'image/webp'
+- let logoPng = 'logoPng'
+- let logoJpg = 'logoJpg'
+- let logoWebp = 'logoWebp'
+
+//- imagesNames
+- let logoMainName = 'logo'
 
 //- images
-if (folderIcons)
-    -
-        let imagesUrlSrc = [
-            'logo': {
-                'png': `assets/images/${folderIconsName}/logo${png}`,
-                'jpg': `assets/images/${folderIconsName}/logo${jpg}`,
-                'webp': `assets/images/${folderIconsName}/logo${webp}`,
-            },
-        ]
+-
+    let imagesFiles = [
+        {
+            logoPng: `assets/images/${folderContentName}/${logoMainName}${png}`,
+            logoJpg: `assets/images/${folderContentName}/${logoMainName}${jpg}`,
+            logoWebp: `assets/images/${folderContentName}/${logoMainName}${webp}`,
+        }
+    ]
 
 //- media
 -

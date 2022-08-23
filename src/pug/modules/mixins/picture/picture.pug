@@ -1,3 +1,6 @@
-//- mixin picture(idImg, className, ...source)
-//-     picture
-//-         source(type=typesWebp media=mediaArr[0] srcset=imagesUrlSrc)
+mixin picture(idImg, className, ...source)
+    for logos in imagesFiles
+        picture
+            source(type=typesWebp media=mediaArr[0] srcset=logos.logoPng)
+            source(type=typesWebp media=mediaArr[1] srcset=logos.logoJpg)
+            source(type=typesWebp media=mediaArr[2] srcset=logos.logoWebp)
