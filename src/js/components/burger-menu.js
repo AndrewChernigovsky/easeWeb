@@ -9,10 +9,11 @@ const CLASS_ACTIVE = 'active';
 
 const menuBurger =(() => {
   const menuBurgers = function menuBurger(){
-    NAV.addEventListener('click', e => {
+    BURGER.addEventListener('click', (e) => {
       e.preventDefault();
-      NAV.toggleClass(CLASS_ACTIVE);
-      NAV.toggleClass(BURGER);
+      console.log('click');
+      NAV.classList.toggle(CLASS_ACTIVE);
+      BURGER.classList.toggle(CLASS_ACTIVE)
     })
   };
 

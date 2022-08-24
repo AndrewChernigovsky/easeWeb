@@ -12,10 +12,11 @@ block title
         if title == indexTitles
             title= title.index
 
-block content 
+block content
     include ../sections/header/header
-    include ../sections/intro-section/intro-section
-    //- include ../sections/main-section/main-section
+    main(class="main")
+        include ../sections/intro-section/intro-section
+        include ../sections/main-section/main-section
 
     if (mainPage)
         h3 sexes
