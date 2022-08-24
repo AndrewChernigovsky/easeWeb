@@ -4,12 +4,12 @@
 // Feel free with using ES6 here.
 
 //import Accordion from './components/accordion';
-import burgerMenu from './components/burger-menu';
+import menuBurger from './components/burger-menu';
 
 (($) => {
   // When DOM is ready
   $(() => {
     //const accordions = new Accordion();
-    burgerMenu.init();
+    menuBurger.init();
   });
 })(jQuery);

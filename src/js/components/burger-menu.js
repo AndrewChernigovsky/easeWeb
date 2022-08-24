@@ -1,42 +1,29 @@
-const BURGER = document.querySelector('.js-burger-open');
+const BURGEROPEN = document.querySelector('.js-burger-open');
+const BURGER = document.querySelector('.burger');
 const NAV = document.querySelector('.js-burger');
+const NAVWRAPPER = document.querySelector('.header__wrapper');
+
 const BODY = document.querySelector('body');
 const CLASS_OVERFLOW = 'overflow';
 const CLASS_ACTIVE = 'active';
 
-const burgerMenu = (() => {
-  const burgeInit = () => {
-    if(!BURGER) return;
-
-    BURGER.addEventListener('click', (e) => {
-      if(!e.currentTarget.classList.contains('active')) {
-        openBurger();
-      } else {
-        closeBurger();
-      }
-    });
+const menuBurger =(() => {
+  const menuBurgers = function menuBurger(){
+    NAV.addEventListener('click', e => {
+      e.preventDefault();
+      NAV.toggleClass(CLASS_ACTIVE);
+      NAV.toggleClass(BURGER);
+    })
   };
 
-  const openBurger = () => {
-    BURGER.classList.add(CLASS_ACTIVE);
-    NAV.classList.add(CLASS_ACTIVE);
-    BODY.classList.add(CLASS_OVERFLOW);
-  }
-
-  const closeBurger = () => {
-    BURGER.classList.remove(CLASS_ACTIVE);
-    NAV.classList.remove(CLASS_ACTIVE);
-    BODY.classList.remove(CLASS_OVERFLOW);
-  }
-
   const init = () => {
-    burgeInit();
+    menuBurgers();
   };
 
   return {
     init,
-    closeBurger
-  };
+  }
 })();
 
-export default burgerMenu;
+
+export default menuBurger;
