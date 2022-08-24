@@ -1,7 +1,72 @@
 extends form-layout
 
 block form
-    form(name=formName action=formAction id=formID)
-        block inputs
-            input(type=typeText)
-            input(type=typeText)
+    form(class=formName name=formName action=formAction id=formID)
+        div(class= formWrapper)
+            block inputs
+                label(class=label for=inputPhone) Введите ваш телефон
+                input(class=input type=typeText  id=inputPhone name='phone')
+                label(class=label for=inputEmail) Введите ваш email
+                input(class=input type=typeText id=inputEmail name='email')
+
+                h3(class=classTitleThird) Возраст1
+
+                div(class=inputWrapper)
+                    label(class=label for=age1) от 20 до 25
+                    input(class=inputRadioBtn type=typeRadio id=age1 name='age1' checked)
+                div(class=inputWrapper)
+                    label(class=label for=age2) от 25 до 35
+                    input(class=inputRadioBtn type=typeRadio id=age2 name='age1')
+                div(class=inputWrapper)
+                    label(class=label for=age3) от 35 до 55
+                    input(class=inputRadioBtn type=typeRadio id=age3 name='age1')
+
+                h3(class=classTitleThird) Возраст2
+            
+                div(class=inputWrapper)
+                    label(class=label for=age1) от 20 до 25
+                    input(class=inputRadioBtn type=typeRadio id=age1 name='age2' checked)
+                div(class=inputWrapper)
+                    label(class=label for=age2) от 25 до 35
+                    input(class=inputRadioBtn type=typeRadio id=age2 name='age2')
+                div(class=inputWrapper)
+                    label(class=label for=age3) от 35 до 55
+                    input(class=inputRadioBtn type=typeRadio id=age3 name='age2')
+
+                h3(class=classTitleThird) Возраст3
+
+                div(class=inputWrapper)
+                    label(class=label for=age1) от 20 до 25
+                    input(class=inputRadioBtn type=typeRadio id=age1 name='age3' checked)
+                div(class=inputWrapper)
+                    label(class=label for=age2) от 25 до 35
+                    input(class=inputRadioBtn type=typeRadio id=age2 name='age3')
+                div(class=inputWrapper)
+                    label(class=label for=age3) от 35 до 55
+                    input(class=inputRadioBtn type=typeRadio id=age3 name='age3')
+
+                h3(class=classTitleThird) Возраст4
+
+                div(class=inputWrapper)
+                    label(class=label for=age1) от 20 до 25
+                    input(class=inputRadioBtn type=typeRadio id=age1 name='age4' checked)
+                div(class=inputWrapper)
+                    label(class=label for=age2) от 25 до 35
+                    input(class=inputRadioBtn type=typeRadio id=age2 name='age4')
+                div(class=inputWrapper)
+                    label(class=label for=age3) от 35 до 55
+                    input(class=inputRadioBtn type=typeRadio id=age3 name='age4')
+
+                h3(class=classTitleThird) Возраст5
+
+                div(class=inputWrapper)
+                    label(class=label for=age1) от 20 до 25
+                    input(class=inputRadioBtn type=typeRadio id=age1 name='age5' checked)
+                div(class=inputWrapper)
+                    label(class=label for=age2) от 25 до 35
+                    input(class=inputRadioBtn type=typeRadio id=age2 name='age5')
+                div(class=inputWrapper)
+                    label(class=label for=age3) от 35 до 55
+                    input(class=inputRadioBtn type=typeRadio id=age3 name='age5')
+
+            button(class=buttonFormSubmit type=submit) получить бесплатно

@@ -4,6 +4,7 @@ include ../modules/mixins/mixins
 block variables
     include ../abstraction/variables
     -   let srcVal = 0
+    -   let swiperVar = 0
 block head 
     include ../partials/head/head
 
@@ -24,8 +25,6 @@ block content
         h2 eseees22
 
     +list1('list1', ...list1)
-
-    //- include ../modules/includes/forms/form-name-phone
 
     each texts, el in text
         if el == 0

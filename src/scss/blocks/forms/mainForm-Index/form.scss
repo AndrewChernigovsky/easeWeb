@@ -1,0 +1,36 @@
+.form {
+    max-width: 300px;
+}
+
+.form-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+
+.formLabel,
+.formInput,
+.buttonFormSubmit {
+    font-size: 1.4rem;
+}
+.formLabel,
+.buttonFormSubmit {
+    color: $white;
+}
+.formInput {
+    color: $black;
+}
+.buttonFormSubmit {
+    border: 1px solid $white;
+    padding: 1rem;
+    transition: $base-transition;
+    margin-top: 2rem;
+
+    &:hover {
+        color: $orange;
+        border: 1px solid $orange;
+    }
+}
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
