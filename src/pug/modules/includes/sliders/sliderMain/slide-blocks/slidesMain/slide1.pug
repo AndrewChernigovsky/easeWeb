@@ -1,0 +1,20 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper
+    div(class=arraySliderClassSlides[0])
+        div(class=arraySliderClassSlideWrapper[0])
+            div(class=arraySliderClassSlideInner[0])
+                block quize__title-1
+                    h3(class=classTitleThird + margin__bottom__2rem) На какой бюджет вы расчитываете?
+                    block quize__1
+                        div(class=inputsWrapper)
+                            div(class=inputWrapper)
+                                label(class=label for=age1) от 20 тысяч до 25
+                                input(class=inputRadioBtn type=typeRadio id=age1 name='price1' checked)
+                            div(class=inputWrapper)
+                                label(class=label for=price2)  от 30 тысяч до 35
+                                input(class=inputRadioBtn type=typeRadio id=price2 name='price1')
+                            div(class=inputWrapper)
+                                label(class=label for=price3)  от 50 тысяч до 100
+                                input(class=inputRadioBtn type=typeRadio id=price3 name='price1')
+                        p(class=quzieParagraph + margin__top__2rem) Цена влияет на время создания и функционал сайта

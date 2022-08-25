@@ -1,0 +1,17 @@
+.swiper {
+    overflow: hidden;
+}
+
+.swiper-main {
+    &__wrapper {
+        background: $blue;
+        min-height: 300px;
+        border: 1px solid $white;
+    }
+
+    &__slide-inner {
+        max-width: 300px;
+        padding:  2rem;
+        margin: 0 auto;
+    }
+}

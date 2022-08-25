@@ -30,6 +30,12 @@
         border: 1px solid $orange;
     }
 }
+
+.input-mainWrapper {
+    display: grid;
+    gap: 2rem;
+}
+
 .input-wrapper {
     display: flex;
     justify-content: space-between;

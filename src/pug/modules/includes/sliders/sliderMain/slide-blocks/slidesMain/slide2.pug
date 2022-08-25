@@ -1,0 +1,17 @@
+extends ../../../../../../layout/forms/formQuize/formQuize
+
+block quize__wrapper
+    div(class=arraySliderClassSlides[0])
+        div(class=arraySliderClassSlideWrapper[0])
+            div(class=arraySliderClassSlideInner[0])
+                block quize__title-1
+                    h3(class=classTitleThird + margin__bottom__2rem) У вас уже есть сайт?
+                    block quize__1
+                        div(class=inputsWrapper)
+                            div(class=inputWrapper)
+                                label(class=label for=linkWebSiteNo) Не имею
+                                input(class=inputRadioBtn type=typeRadio id=linkWebSiteNo name='linkWebSite' checked)
+                            div(class=inputWrapper)
+                                label(class=label for=linkWebSiteYes)  Введите ссылку на свой сайт
+                                textarea(class=inputRadioBtn type=typeRadio id=linkWebSiteYes name='linkWebSite')
+                        p(class=quzieParagraph + margin__top__2rem) Анализ вашего сайта, дает информацию о том как нам сотрудничать в будущем
