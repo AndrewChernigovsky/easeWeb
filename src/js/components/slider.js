@@ -60,7 +60,4 @@ const swiperMain = (() => {
 
 })();
 
-export default {
-  swiperSlider,
-  swiperMain,
-};
+export default swiperMain;

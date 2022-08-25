@@ -1,4 +1,8 @@
 .tabs {
+  li {
+    font-size: 2rem;
+    color: $white;
+  }
   &__header {
     display: flex;
   }
