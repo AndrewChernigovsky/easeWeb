@@ -31,7 +31,7 @@ const swiperMain = (() => {
     spaceBetween: 20,
     speed: 800,
     autoplay: {
-      delay: 1500,
+      delay: 1000500,
       disableOnInteraction: false,
     },
     centerInsufficientSlides: true,
@@ -43,6 +43,10 @@ const swiperMain = (() => {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
     },
     breakpoints: {
       768: {

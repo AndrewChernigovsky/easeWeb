@@ -33,6 +33,9 @@
 .input-mainWrapper {
     display: grid;
     gap: 2rem;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
 }
 .input-wrapper {
     display: flex;
