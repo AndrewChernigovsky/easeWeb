@@ -51,7 +51,7 @@ const swiperMain = (() => {
     breakpoints: {
       768: {
         spaceBetween: 40,
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
     },
   });

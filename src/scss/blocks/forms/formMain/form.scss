@@ -60,17 +60,20 @@
 }
 .input-RadioBtn:checked  + .formLabel::after {
     background: linear-gradient($red, $red1);
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 2px solid $red;
     opacity: 1;
+    right: 0;
     transition: $base-transition;
-    transform: translateX(0%);
 }
+
 .formLabel {
     cursor: pointer;
     min-height: 30px;
+    line-height: 30px;
+    
     &::after {
         content: '';
         position: absolute;
@@ -79,11 +82,11 @@
         height: 25px;
         border-radius: 50%;
         background: linear-gradient($red, $blue2);
+        border: 2px solid $blue2;
         opacity: 0.4;
-        right: 150px;
+        right: 0;
         top: 0;
         transition: $base-transition;
-        transform: translateX(-10%);
         cursor: pointer;
     }
 }
