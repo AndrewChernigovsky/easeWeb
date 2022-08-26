@@ -4,20 +4,10 @@ mixin pText
         if block
             block
         
-mixin spanText
-    span(class=className)
+mixin p(className, text)
+    p(class=className)= text
+
+mixin spanText(className, text)
+    span(class=className)= text
         if block
             block
-
-//- links
-mixin aLink(urlLink, className, ...links)
-    each link in links
-        a(href=urlLink, class=className)= link
-
-//- titles
-
-mixin h1(className, text)
-    h1(class=(className, mainTitle))= text
-
-mixin h2(className, text)
-    h2(class=className)= text

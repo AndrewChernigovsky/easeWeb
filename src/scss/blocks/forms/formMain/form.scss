@@ -34,7 +34,6 @@
     display: grid;
     gap: 2rem;
     max-width: 500px;
-    min-width: 300px;
     margin: 0 auto;
 }
 .input-wrapper {
@@ -60,10 +59,11 @@
 }
 .input-RadioBtn:checked  + .formLabel::after {
     background: linear-gradient($red, $red1);
+    background: linear-gradient($blue1, $green);
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    border: 2px solid $red;
+    border: 2px solid $green2;
     opacity: 1;
     right: 0;
     transition: $base-transition;
@@ -73,7 +73,7 @@
     cursor: pointer;
     min-height: 30px;
     line-height: 30px;
-    
+
     &::after {
         content: '';
         position: absolute;
@@ -82,6 +82,7 @@
         height: 25px;
         border-radius: 50%;
         background: linear-gradient($red, $blue2);
+
         border: 2px solid $blue2;
         opacity: 0.4;
         right: 0;
