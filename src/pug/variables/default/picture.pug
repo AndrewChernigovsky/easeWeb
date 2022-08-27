@@ -1,15 +1,10 @@
-- let logoPicture = true
-
 //- folders
-- let folderContent = true
-- let folderDecor = true
-- let folderIcons = true
-- let folderSprite = true
-
 - let folderContentName = 'content'
 - let folderDecorName = 'decor'
 - let folderIconsName = 'icons'
 - let folderSpriteName = 'sprite'
+
+- let imagesFolder = 'images'
 
 //- types files
 - let png = '.png'
@@ -22,25 +17,27 @@
 - let logoWebp = 'logoWebp'
 
 //- imagesNames
-- let logoMainName = 'logo'
+- let logoPicture = 'logo'
 
-//- images
 -
-  let imagesFiles = [
-    {
-      logoPng: `images/${folderIconsName}/${logoMainName}${png} 1x, images/${folderIconsName}/${logoMainName}${png} 2x,`,
-      logoJpg: `images/${folderIconsName}/${logoMainName}${jpg} 1x, images/${folderIconsName}/${logoMainName}${jpg} 2x,`,
-      logoWebp: `images/${folderIconsName}/${logoMainName}${webp} 1x, images/${folderIconsName}/${logoMainName}${webp} 2x,`,
-      logoJpgIMG: `images/${folderIconsName}/${logoMainName}${png} 1x, images/${folderIconsName}/${logoMainName}${png}} 2x,`,
-      logoJpgIMGMin: `images/${folderIconsName}/${logoMainName}${png}`,
-      alt: 'EaseWeb, сайты, которые продают',
-    }
-  ]
+	let imagesFiles = [
+		{
+			logoPicture: {
+				path: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[0],
+				path2x: `${imagesFolder}/${folderIconsName}/${logoPicture}` + sizesBefore1000[1],
+				pathImage: `${imagesFolder}/${folderIconsName}/${logoPicture}`,
+				type: [
+					'image/webp',
+				],
+				alt: 'EaseWeb, сайты, которые продают',
+			},
+		},
+	]
 
 //- media
 -
-  let mediaArr = [
-    'min-width: 768px',
-    'min-width: 1024px',
-    'min-width: 1440px',
-  ]
+	let mediaArr = [
+		'min-width: 768px',
+		'min-width: 1024px',
+		'min-width: 1440px',
+	]

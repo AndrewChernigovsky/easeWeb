@@ -1,10 +1,10 @@
-mixin picture(idImg, className, ...source)
-    for logos in imagesFiles
-        picture
-            source(type=typesPng media=mediaArr[0] srcset=logos.logoPng)
-            source(type=typesJpg media=mediaArr[1] srcset=logos.logoJpg)
-            source(type=typesWebp media=mediaArr[2] srcset=logos.logoWebp)
-            img(src=logos.logoJpgIMGMin srcset=logos.logoJpgIMG alt=logos.alt)
+//- mixin picture(idImg, className, ...source)
+//-     for logos in imagesFiles
+//-         picture
+//-             source(type=typesPng media=mediaArr[0] srcset=logos.logoPng)
+//-             source(type=typesJpg media=mediaArr[1] srcset=logos.logoJpg)
+//-             source(type=typesWebp media=mediaArr[2] srcset=logos.logoWebp)
+//-             img(src=logos.logoJpgIMGMin srcset=logos.logoJpgIMG alt=logos.alt)
 
 mixin icon(id, className, alt, media)
     picture
@@ -12,3 +12,29 @@ mixin icon(id, className, alt, media)
         source(type, media, srcset)
         source(type, media, srcset)
         img(id, src, srcset,alt)
+
+
+mixin picture(pathImage, path, path2, alt, type)
+  picture
+    if imageMedia == 0
+        source(srcset=(path + webp, path2x + webp), type=type, media=mediaArr[0])
+    else if jpgType
+         source(srcset=(path + jpg, path2x + jpg), type=type, media=mediaArr[0])
+    if imageMedia == 1
+        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[0])
+        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[1])
+    else if jpgType
+        source(srcset=(path  + jpg, path2x  + jpg), type=type, media=mediaArr[0])
+        source(srcset=(path  + jpg, path2x  + jpg), type=type, media=mediaArr[1])
+    if  imageMedia == 2
+        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[0])
+        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[1])
+        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[2])
+    else if pngType
+        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[0])
+        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[1])
+        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[2])
+    if jpgType
+        img(src=pathImage + jpg, alt=alt)
+    if pngType
+        img(src=pathImage + png, alt=alt)
