@@ -14,27 +14,21 @@ mixin icon(id, className, alt, media)
         img(id, src, srcset,alt)
 
 
-mixin picture(pathImage, path, path2, alt, type)
-  picture
-    if imageMedia == 0
-        source(srcset=(path + webp, path2x + webp), type=type, media=mediaArr[0])
-    else if jpgType
-         source(srcset=(path + jpg, path2x + jpg), type=type, media=mediaArr[0])
-    if imageMedia == 1
-        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[0])
-        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[1])
-    else if jpgType
-        source(srcset=(path  + jpg, path2x  + jpg), type=type, media=mediaArr[0])
-        source(srcset=(path  + jpg, path2x  + jpg), type=type, media=mediaArr[1])
-    if  imageMedia == 2
-        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[0])
-        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[1])
-        source(srcset=(path  + webp, path2x  + webp), type=type, media=mediaArr[2])
-    else if pngType
-        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[0])
-        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[1])
-        source(srcset=(path  + png, path2x  + png), type=type, media=mediaArr[2])
-    if jpgType
-        img(src=pathImage + jpg, alt=alt)
-    if pngType
-        img(src=pathImage + png, alt=alt)
+mixin picture(alt, type, pathDefault, pathDefault2x, path, path2x, path3x, path4x)
+    picture
+        if (imageMedia == 0)
+            source(srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ), type=type, media=mediaArr[0])
+
+        if (imageMedia == 1)
+            source(srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ), type=type, media=mediaArr[0])
+            source(srcset=(path2x  + webp + ' 1x' + ', ' + path3x  + webp + ' 2x' ), type=type, media=mediaArr[1])
+
+        if (imageMedia == 2)
+            source(srcset=(path  +  webp + ' 1x' + ', ' + path2x+ webp + ' 2x' ), type=type, media=mediaArr[0])
+            source(srcset=(path2x  + webp + ' 1x' + ', ' + path3x + webp + ' 2x' ), type=type, media=mediaArr[1])
+            source(srcset=(path3x  + webp + ' 1x' + ', ' + path4x  + webp + ' 2x' ), type=type, media=mediaArr[2])
+
+        if jpgType
+            img(src=pathDefault + jpg, srcset=(pathDefault  + jpg + ' 1x' + ', ' + pathDefault2x  + jpg + ' 2x' ) alt=alt)
+        if pngType
+            img(src=pathDefault + png, srcset=(pathDefault  + png + ' 1x' + ', ' + pathDefault2x  + png + ' 2x' ) alt=alt)
